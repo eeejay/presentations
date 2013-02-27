@@ -3,14 +3,49 @@
 <!-- <html lang="en-US" class="nonumbers"> -->
 <!-- ^ if you want no numbers on the slides add a "nonumbers" class to the HTML element -->
 <head>
-	<title>Mozilla and the new web challenge</title>
+	<title>Accessibility in Firefox for Android</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=1274, user-scalable=no">
 	<link rel="stylesheet" href="themes/mozilla/styles/style.css">
+	<link rel="stylesheet" href="themes/chart/styles/chart.css">
+	<link rel="stylesheet" href="themes/videodemo.css">
+    <style>
+      .native-feature {
+      background-color: rgb(193, 56, 50);
+      background-repeat: repeat-x;
+      background-image: linear-gradient(rgb(234, 59, 40), rgb(193, 56, 50));
+      }
+      .our-feature {
+      background-color: rgb(0, 83, 159);
+      background-repeat: repeat-x;
+      background-image: linear-gradient(rgb(0, 150, 219), rgb(0, 83, 159))
+      }
+      table.features
+      {
+      border-collapse: separate;
+      border-spacing: 10px;
+      width: 100%;
+      }
+      
+      .features th, .features td {
+      padding: 6px;
+      text-align: center;
+      font-size: 14pt;
+      }
+      
+      .features td {
+      border-radius: 0.25em;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.2em black
+      }
+      .features th img {
+      max-height: 80px;
+      }
+    </style>
 </head>
 <body class="list">
 	<header class="caption">
-		<h1>Mozilla and the new web challenge</h1>
+		<h1>Accessibility in Firefox for Android</h1>
 		<p class="footer">{Your name}, {your <a href="http://twitter.com/">@twitter</a> or <a href="mailto:you@email.com">you@email.com</a>}</p>
 	</header>
 
@@ -30,26 +65,31 @@
 	<div id="cover" class="slide"><div>
 		<section>
 			<header>
-				<h2>Mozilla and the new web challenge</h2>
+				<h2>Accessibility in Firefox for Android</h2>
 			</header>
-			<img src="pictures/mozillaoverview/introicons.png" class="middle" alt="Icons of B2G, Firefox OS and Mozilla Apps">
-			<footer class="byline">{Firstname}, {Lastname}, {Conference}, {Location}, {date}</footer>
+			<img src="pictures/android/bgpromo-fxandroid.jpg" class="middle"
+                 alt="Firefox for Android">
+			<footer class="byline">Marco Zehe & Eitan Isaacson, CSUN, San Diego, February 2013</footer>
 		</section>
 	</div></div>
 
 	<div id="intro" class="slide"><div>
 		<section>
 			<header>
-				<h2>Who am I?</h2>
+				<h2>Who are we?</h2>
 			</header>
-			<!--
-				<img src="pictures/mozillaoverview/welcome.jpg" class="right" alt="Welcome mat">
-				^ add your photo if wanted - 400px wide works best
-			--> 
-			<ul>
-				<li>{name}</li>
-				<li>{title}</li>
-				<li>{<a href="http://twitter.com/">@twitter</a>}</li>
+			<ul style="float: left;">
+				<li>Marco Zehe</li>
+				<li>QA Engineer</li>
+				<li><a href="http://www.marcozehe.de/">marcozehe.de</a></li>
+				<li><a href="https://twitter.com/MarcoInEnglish">@MarcoInEnglish</a></li>
+			</ul>
+
+			<ul style="float: right;">
+				<li>Eitan Isaacson</li>
+				<li>Software Developer</li>
+				<li><a href="http://blog.monotonous.org/">monotonous.org</a></li>
+				<li><a href="https://twitter.com/eeejay">@eeejay</a></li>
 			</ul>
 
 			<footer class="notes">
@@ -132,94 +172,14 @@
 		</section>
 	</div></div>
 
-
-	<div id="webmaker" class="slide"><div>
-		<section>
-			<header>
-				<h2>A generation of webmakers</h2>
-			</header>
-			<img src="pictures/mozillaoverview/webmaker.jpg" class="middle" alt="Mozilla Webmaker">
-			<p class="demourl">
-				<a href="https://webmaker.org">https://webmaker.org</a>
-			</p>
-
-			<footer class="notes">
-				Mozilla Webmaker is an ongoing project to turn pure consumers of the web
-				into makers. We teach basic web editing skills, how to publish and mix 
-				video with online content and basic ways to keep safe and have a good
-				time on the web.
-			</footer>
-
-		</section>
-	</div></div>
-
-	<div id="thimble" class="slide"><div>
-		<section>
-			<header>
-				<h2>Learning by doing!</h2>
-			</header>
-			<img src="pictures/mozillaoverview/thimble.jpg" class="middle" alt="Mozilla Thimble">
-			<p class="demourl">
-				<a href="https://thimble.webmaker.org/en-US/projects/map/edit">https://thimble.webmaker.org/en-US/projects/map/edit</a>
-			</p>
-			<footer class="notes">
-				Mozilla Thimble is a very simple and interactive way to learn basic HTML. An editor on the 
-				right hand side of the screen lets you write things and the results are shown immediately on 
-				the left. You can also choose from already existing projects and write in them. The editor 
-				shows you when you make an error and links it to the documentation on the developer network.
-				You can choose from various challenges to become better and better in editing HTML.
-			</footer>
-
-		</section>
-	</div></div>
-
-	<div id="popcorn" class="slide"><div>
-		<section>
-			<header>
-				<h2>Lights, Camera, interaction!</h2>
-			</header>
-			<img src="pictures/mozillaoverview/popcorn.jpg" class="middle" alt="Mozilla popcorn">
-			<p class="demourl">
-				<a href="https://mozillapopcorn.org">http://mozillapopcorn.org</a>
-			</p>
-
-			<footer class="notes">
-				Mozilla Popcorn is a simple way to create interactive web experiences from video and 
-				audio materials. You have an editor to overlay web content over videos and interact 
-				with parts of the page.
-			</footer>
-
-		</section>
-	</div></div>
-
-	<div id="persona" class="slide"><div>
-		<section>
-			<header>
-				<h2>Persona - own your identity!</h2>
-			</header>
-			<img src="pictures/mozillaoverview/persona.jpg" height="350" class="middle" alt="Mozilla Thimble">
-			<p class="demourl">
-				<a href="http://www.mozilla.org/en-US/persona/">http://www.mozilla.org/en-US/persona/</a>
-			</p>
-
-			<footer class="notes">
-				Mozilla Persona is a simple way to log into web apps and sites. Instead of having 
-				to create a username and password for each product you log in to Persona allows you 
-				to identify yourself with one of your verified e-mails. That way you don't have to
-				have thousands of profiles online and you only give sites the information you want 
-				instead of all your data.
-			</footer>
-
-		</section>
-	</div></div>
-
 	<div id="a-new-challenge" class="slide cover w"><div>
 		<section>
 			<header>
 				<h2>A new challenge</h2>
 			</header>
-			<img src="pictures/mozillaoverview/responsive.jpg" class="middle" alt="Responsive Design">
-			<small class="credits"><a href="http://www.flickr.com/photos/indyplanets/5693612984/">Photo by Jason Weaver</a></small>
+			<img src="pictures/mobile/phoneonthego.jpg" class="middle"
+                 alt="Mobile phone users in a public square">
+			<small class="credits"><a href="http://500px.com/photo/10927757">Photo by Alexander Rentsch</a></small>
 
 		<footer class="notes">
 			One very obvious change in the last years was that the web became much more mobile.
@@ -232,6 +192,404 @@
 		</section>
 	</div></div>
 
+	<div id="a-new-challenge2" class="slide"><div>
+		<section>
+          <ul>
+            <li>By the end of 2011, more smartphones were being sold
+              than new PCs.</li>
+            <li>Mobile data usage has more than doubled each year, 4
+              years in a row.</li>
+            <li>By the end of 2013, more than a billion Android phones
+              will be sold.</li>
+          </ul>
+		</section>
+    </div></div>
+
+	<div id="android-dominates" class="slide"><div>
+		<section>
+			<header>
+				<h2>Unit Sales by OS in Q3 2012</h2>
+			</header>
+            <div class="inner">
+              <table class="barchart middle" id="sales">
+                <tr>
+                  <td>Android</td>
+                  <td><span>70.7%</span></td>
+                </tr>
+                <tr>
+                  <td>iOS</td>
+                  <td><span>15.7%</span></td>
+                </tr>
+                <tr>
+                  <td>Blackberry</td>
+                  <td><span>4.3%</span></td>
+                </tr>
+                <tr>
+                  <td>bada</td>
+                  <td><span>3.0%</span></td>
+                </tr>
+                <tr>
+                  <td>Symbian</td>
+                  <td><span>2.0%</span></td>
+                </tr>
+                <tr>
+                  <td>Windows Phone</td>
+                  <td><span>1.9%</span></td>
+                </tr>
+                <tr>
+                  <td>Others</td>
+                  <td><span>2.3%</span></td>
+                </tr>
+              </table>
+            </div>
+			<small class="credits">
+				TomiAhonen Consulting Estimates November 14, 2012 from vendor data and other sources
+			</small>
+
+			<footer class="notes">
+              While Jelly Bean has fantastic accessibility features,
+              gingerbread is still the most common device. It is
+              important to support Gingerbread users.
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div id="android-versions" class="slide"><div>
+		<section>
+			<header>
+				<h2>Android versions</h2>
+			</header>
+            <div class="inner">
+              <table class="barchart middle" id="versions">
+                <tr>
+                  <td>Cupcake</td>
+                  <td><span>0.1%</span></td>
+                </tr>
+                <tr>
+                  <td>Donut</td>
+                  <td><span>0.3%</span></td>
+                </tr>
+                <tr>
+                  <td>Eclair</td>
+                  <td><span>2.7%</span></td>
+                </tr>
+                <tr>
+                  <td>Froyo</td>
+                  <td><span>10.3%</span></td>
+                </tr>
+                <tr>
+                  <td>Gingerbread</td>
+                  <td><span>50.8%</span></td>
+                </tr>
+                <tr>
+                  <td>Honeycomb</td>
+                  <td><span>1.6%</span></td>
+                </tr>
+                <tr>
+                  <td>Ice Cream Sandwich</td>
+                  <td><span>27.5%</span></td>
+                </tr>
+                <tr>
+                  <td>Jelly Bean</td>
+                  <td><span>6.7%</span></td>
+                </tr>
+              </table>
+            </div>
+			<small class="credits">
+				<a href="http://developer.android.com/about/dashboards">http://developer.android.com/about/dashboards</a>
+			</small>
+
+			<footer class="notes">
+              While Jelly Bean has fantastic accessibility features,
+              gingerbread is still the most common device. It is
+              important to support Gingerbread users.
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div id="a-lot-is-at-stake" class="slide cover w"><div>
+		<section>
+			<header>
+				<h2>A lot is at stake</h2>
+			</header>
+			<img src="pictures/mobile/tahrir.jpg" class="middle"
+                 alt="A raised hand in Tahrir square with a smartphone">
+			<small class="credits"><a href="http://www.flickr.com/photos/usaid_images/8224719890/">Photo by USAID</a></small>
+
+		<footer class="notes">
+			One very obvious change in the last years was that the web became much more mobile.
+			Instead of desktop machines we use laptops, smart phones and tablets and all of 
+			these devices get more powerful by the month. They all come with different resolutions
+			and connectivity issues, though and Mozilla is happy to take on the challenge of 
+			moving the open web from immobile machines to on-the-go computing.
+		</footer>
+	
+		</section>
+	</div></div>
+
+	<div id="feature-round1" class="slide"><div>
+		<section>
+			<header>
+				<h2>First Round</h2>
+			</header>
+
+            <table class="features">
+              <tr>
+                <th>
+                  <img src="pictures/android/gingerbread.png" alt="Gingerbread">
+                  <br/>
+                  Gingerbread (2.3)
+                </th>
+                <th>
+                  <img src="pictures/android/ics.png" alt="Ice Cream Sandwitch">
+                  <br/>
+                  Ice Cream Sandwitch (4.0)
+                </th>
+                <th>
+                  <img src="pictures/android/jb.png" alt="Jelly Bean">
+                  <br/>
+                  Jelly Bean (4.2)
+                </th>
+              </tr>
+              <tr>
+                <td class="native-feature" colspan="3">
+                  D-Pad Navigation
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td class="native-feature" colspan="2">
+                  Explore By Touch
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                </td>
+                <td class="native-feature">
+                  Gesture Navigation
+                </td>
+              </tr>
+            </table>
+
+			<footer class="notes">
+              When a user purchases a device they go through the
+              process of customizing it for their needs and learning
+              how to effectivley use it. Our job, as an application in
+              Android, is to be accessible to the user under those terms.
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div id="feature-round2" class="slide"><div>
+		<section>
+			<header>
+				<h2>Second Round</h2>
+			</header>
+
+            <table class="features">
+              <tr>
+                <th>
+                  <img src="pictures/android/gingerbread.png" alt="Gingerbread">
+                  <br/>
+                  Gingerbread (2.3)
+                </th>
+                <th>
+                  <img src="pictures/android/ics.png" alt="Ice Cream Sandwitch">
+                  <br/>
+                  Ice Cream Sandwitch (4.0)
+                </th>
+                <th>
+                  <img src="pictures/android/jb.png" alt="Jelly Bean">
+                  <br/>
+                  Jelly Bean (4.2)
+                </th>
+              </tr>
+              <tr>
+                <td class="native-feature" colspan="3">
+                  D-Pad Navigation
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td class="native-feature" colspan="2">
+                  Explore By Touch
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                </td>
+                <td class="native-feature">
+                  Gesture Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="3">
+                  Keyboard Quick Navigation
+                </td>
+              </tr>
+            </table>
+
+			<footer class="notes">
+              While Jelly Bean has fantastic accessibility features,
+              gingerbread is still the most common device. It is
+              important to support Gingerbread users.
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div id="feature-round3" class="slide"><div>
+		<section>
+			<header>
+				<h2>Third Round</h2>
+			</header>
+
+            <table class="features">
+              <tr>
+                <th>
+                  <img src="pictures/android/gingerbread.png" alt="Gingerbread">
+                  <br/>
+                  Gingerbread (2.3)
+                </th>
+                <th>
+                  <img src="pictures/android/ics.png" alt="Ice Cream Sandwitch">
+                  <br/>
+                  Ice Cream Sandwitch (4.0)
+                </th>
+                <th>
+                  <img src="pictures/android/jb.png" alt="Jelly Bean">
+                  <br/>
+                  Jelly Bean (4.2)
+                </th>
+              </tr>
+              <tr>
+                <td class="native-feature" colspan="3">
+                  D-Pad Navigation
+                </td>
+              </tr>
+              <tr>
+                <td>
+                </td>
+                <td class="native-feature" colspan="2">
+                  Explore By Touch
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                </td>
+                <td class="native-feature">
+                  Gesture Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="3">
+                  Keyboard Quick Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="3">
+                  Gesture Quick Navigation
+                </td>
+              </tr>
+            </table>
+
+			<footer class="notes">
+              While Jelly Bean has fantastic accessibility features,
+              gingerbread is still the most common device. It is
+              important to support Gingerbread users.
+			</footer>
+
+		</section>
+	</div></div>
+
+
+	<div id="feature-round4" class="slide"><div>
+		<section>
+			<header>
+				<h2>Fourth Round</h2>
+			</header>
+
+            <table class="features">
+              <tr>
+                <th>
+                  <img src="pictures/android/gingerbread.png" alt="Gingerbread">
+                  <br/>
+                  Gingerbread (2.3)
+                </th>
+                <th>
+                  <img src="pictures/android/ics.png" alt="Ice Cream Sandwitch">
+                  <br/>
+                  Ice Cream Sandwitch (4.0)
+                </th>
+                <th>
+                  <img src="pictures/android/jb.png" alt="Jelly Bean">
+                  <br/>
+                  Jelly Bean (4.2)
+                </th>
+              </tr>
+              <tr>
+                <td class="native-feature" colspan="3">
+                  D-Pad Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature">
+                  Explore By Touch
+                </td>
+                <td class="native-feature" colspan="2">
+                  Explore By Touch
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="2">
+                  Gesture Navigation
+                </td>
+                <td class="native-feature">
+                  Gesture Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="3">
+                  Keyboard Quick Navigation
+                </td>
+              </tr>
+              <tr>
+                <td class="our-feature" colspan="3">
+                  Gesture Quick Navigation
+                </td>
+              </tr>
+            </table>
+
+			<footer class="notes">
+              While Jelly Bean has fantastic accessibility features,
+              gingerbread is still the most common device. It is
+              important to support Gingerbread users.
+			</footer>
+
+		</section>
+	</div></div>
+
+	<div id="demo1" class="slide cover w"><div>
+		<section>
+		  <header>
+		    <h2>Demo</h2>
+		  </header>
+          <video class="demo hide"></video>
+          <div class="democontrols">
+            <span role="button" onclick="toggle(this)"
+                    style="margin-right: 20%;">Start Demo</span>
+            <span role="button" onclick="rotate(90)">⟳</span>
+            <span role="button" onclick="rotate(-90)" style="margin-right: 10%;">⟲</span>
+            <span role="button" onclick="scale(0.10)">+</span>
+            <span role="button" onclick="scale(-0.10)">-</span>
+          </div>
+		</section>
+    </div></div>
 
 	<div id="brokenpromise" class="slide"><div>
 		<section>
@@ -616,6 +974,8 @@
 		-->
 	<div class="progress"><div></div></div>
 	<script src="scripts/script.js"></script>
+	<script src="scripts/chart.js"></script>
+	<script src="scripts/videodemo.js"></script>
 	<!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
 </body>
 </html>

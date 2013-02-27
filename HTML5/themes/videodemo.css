@@ -1,0 +1,28 @@
+.democontrols { 
+  font-size: 18px;
+  position: absolute;
+  bottom: 40px;
+  width: 800px;
+  text-align: center;
+}
+
+video.demo {
+  width: 100%;
+  //height: 100%;
+  transition: 0.25s transform ease;
+}
+
+span[role=button] { 
+  background-color: #000;
+  color: #fff;
+  opacity: 0.50;
+  border: 1px solid #fff;
+  cursor: pointer;
+  padding: 0 0.2em;
+  border-radius: 0.2em;
+  transition: 0.25s opacity ease;
+}
+
+span[role=button]:hover {
+  opacity: 1.0;
+}

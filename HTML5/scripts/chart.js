@@ -1,5 +1,6 @@
 (function () {
    function showChart (aChart) {
+     console.log('showChart', aChart.id);
      var ppts = aChart.querySelectorAll('table.barchart td:last-child');
      var nums = [];
      for (var i = 0; i < ppts.length; i++) {
@@ -16,18 +17,17 @@
 
      var normalizeNum = 100.0/Math.max.apply(Math, nums);
 
-     window.setTimeout(
-       function () {
-         for (var i = 0; i < ppts.length; i++) {
-           var ppt = ppts[i].querySelector('span');
-           if (!ppt)
-             continue;
-           var num = ppt.textContent.replace('%', '') + 0;
-           var bar = ppts[i].querySelector('div.bar');
-           bar.firstChild.style.width = (num * normalizeNum) + '%';
-         }
-       }, 100);
+     for (var i = 0; i < ppts.length; i++) {
+       var ppt = ppts[i].querySelector('span');
+       if (!ppt)
+         continue;
+       var num = ppt.textContent.replace('%', '') + 0;
+       var bar = ppts[i].querySelector('div.bar');
+       bar.firstChild.style.width = (num * normalizeNum) + '%';
+     }
    }
 
-   showChart(document.querySelector('.barchart'));
+   var charts = document.querySelectorAll('.barchart');
+   for (var i=0; i < charts.length;i++)
+     showChart(charts[i]);
 })();

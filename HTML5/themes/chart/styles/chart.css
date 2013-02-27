@@ -1,17 +1,18 @@
 table.barchart { 
-  width: 50%;
+  width: 75%;
   margin: auto;
-  border: 1px solid black;
   font: 12px/20px 'Helvetica Neue',Arial,sans-serif;
+}
+
+table.barchart td { 
+  padding: 0.5em;
 }
 
 table.barchart td:first-child { 
   text-align: right;
   white-space: nowrap;
   width: 1%;
-  font-size: 80%;
-/*  -moz-transform: rotate(-45deg);
-    -moz-transform-origin: 100% 80%; */
+  vertical-align: top;
 }
 
 table.barchart td:last-child { 
@@ -29,15 +30,20 @@ table.barchart td:last-child div.bar {
   width: 90%;
 }
 
-table.barchart td:last-child div.bar > div {
-  background-image: linear-gradient(bottom, rgb(171,84,22) 10%, rgb(235,152,97) 55%);
-  background-image: -o-linear-gradient(bottom, rgb(171,84,22) 10%, rgb(235,152,97) 55%);
-  background-image: -moz-linear-gradient(bottom, rgb(171,84,22) 10%, rgb(235,152,97) 55%);
-  background-image: -webkit-linear-gradient(bottom, rgb(171,84,22) 10%, rgb(235,152,97) 55%);
-  background-image: -ms-linear-gradient(bottom, rgb(171,84,22) 10%, rgb(235,152,97) 55%);
-  border-radius: 0.2em;
+body.full .slide table.barchart:not(.active) td:last-child div.bar {
+  width: 0;
+}
 
+body.full .slide:target table.barchart.active td:last-child div.bar {
   transition: width 1s ease;
+  width: 90%;
+}
+
+table.barchart td:last-child div.bar > div {
+  background-color: rgb(193, 56, 50);
+  background-repeat: repeat-x;
+  background-image: linear-gradient(rgb(234, 59, 40), rgb(193, 56, 50));
+  border-radius: 0.2em;
 
   position: absolute;
   top: 0;

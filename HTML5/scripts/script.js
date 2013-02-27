@@ -130,13 +130,19 @@
 		// Shortcut for slides without inner navigation
 		if (true !== slideList[slideNumber].hasInnerNavigation) { return -1; }
 
-		var activeNodes = document.querySelectorAll(getSlideHash(slideNumber) + ' .active'),
-			// NOTE: we assume there is no other elements in inner navigation
-			node = activeNodes[activeNodes.length - 1].nextElementSibling;
+        var activeNodes = document.querySelectorAll(getSlideHash(slideNumber) + ' .active');
+	    // NOTE: we assume there is no other elements in inner navigation
+        var node = (activeNodes.length) ?
+          activeNodes[activeNodes.length - 1].nextElementSibling :
+          document.querySelector(
+            getSlideHash(slideNumber) + ' .inner').firstElementChild;
 
-		if (null !== node) {
+        console.log(getSlideHash(slideNumber) + ' .inner');
+        console.log(node);
+
+        if (null !== node) {
 			node.classList.add('active');
-			return activeNodes.length + 1;
+			return (activeNodes.length || 0) + 1;
 		} else {
 			return -1;
 		}
